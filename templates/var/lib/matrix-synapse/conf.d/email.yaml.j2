@@ -8,8 +8,7 @@
 #
 email:
   enable_notifs: "{{ synapse_email_enable_notifs }}"
-  smtp_host: "localhost"
-  smtp_port: 25 # SSL: 465, STARTTLS: 587
+  smtp_host: "{{ synapse_email_smtp_host }}"
   smtp_port: "{{ synapse_email_port }}"
   smtp_user: "{{ synapse_email_username }}"
   smtp_pass: "{{ synapse_email_password }}"

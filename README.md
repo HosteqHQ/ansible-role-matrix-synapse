@@ -136,6 +136,7 @@ synapse_email_with_custom_templates: false
 # If true, remember use a customized version of the template conf.d/email.yaml.j2 to reference them
 synapse_email_templates_src: email_notif_templates
 synapse_email_templates_dest: "{{ synapse_installation_path }}/email_notif_templates"
+synapse_email_smtp_host: "YOURSMTPHOSTNAME"
 synapse_email_port: 465
 synapse_email_username: YOURUSERNAME
 synapse_email_password: YOURPASSWORD
