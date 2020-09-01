@@ -136,6 +136,12 @@ synapse_email_with_custom_templates: false
 # If true, remember use a customized version of the template conf.d/email.yaml.j2 to reference them
 synapse_email_templates_src: email_notif_templates
 synapse_email_templates_dest: "{{ synapse_installation_path }}/email_notif_templates"
+synapse_email_port: 465
+synapse_email_username: YOURUSERNAME
+synapse_email_password: YOURPASSWORD
+synapse_email_tls: true
+synapse_email_notif_new_users: true
+synapse_email_enable_notifs: true
 
 ###  LDAP
 synapse_with_ldap_authentication: false
@@ -178,6 +184,7 @@ riot_jitsi_preferred_domain: jitsi.riot.im
 riot_display_name: 'My Org Chat'
 riot_default_theme: light # 'light', 'dark' or your own 'custom-${theme-name}' (see riot_custom_themes below)
 riot_default_country_code: GB
+riot_validation_email_expiry: 1h
 
 ### Riot UI customization
 riot_customatize_ui: false

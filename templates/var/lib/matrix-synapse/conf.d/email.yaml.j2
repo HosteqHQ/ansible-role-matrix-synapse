@@ -7,31 +7,32 @@
 # smtp_pass variables should be used
 #
 email:
-#  enable_notifs: true
+  enable_notifs: "{{ synapse_email_enable_notifs }}
   smtp_host: "localhost"
   smtp_port: 25 # SSL: 465, STARTTLS: 587
-#   smtp_user: "exampleusername"
-#   smtp_pass: "examplepassword"
-#   require_transport_security: false
+  smtp_port: "{{ synapse_email_port }}"
+  smtp_user: "{{ synapse_email_username }}"
+  smtp_pass: "{{ synapse_email_password }}"
+  require_transport_security: "{{ synapse_email_tls }}"
   notif_from: "{{ synapse_email_notif_from }}"
 #   app_name: Matrix
 #
 #   # Enable email notifications by default
 #   #
-#   notif_for_new_users: true
+  notif_for_new_users: "{{ synapse_email_notif_new_users }}"
 #
 #   # Defining a custom URL for Riot is only needed if email notifications
 #   # should contain links to a self-hosted installation of Riot; when set
 #   # the "app_name" setting is ignored
 #   #
-#   riot_base_url: "https://{{ riot_server_name }}"
+  riot_base_url: "https://{{ riot_server_name }}"
 #
 #   # Configure the time that a validation email or text message code
 #   # will expire after sending
 #   #
 #   # This is currently used for password resets
 #   #
-#   #validation_token_lifetime: 1h
+  validation_token_lifetime: {{ riot_validation_email_expiry }}
 #
 #   # Template directory. All template files should be stored within this
 #   # directory. If not set, default templates from within the Synapse
